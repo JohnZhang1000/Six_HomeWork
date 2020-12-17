@@ -50,35 +50,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <LinearLayout
-            android:gravity="center"
             android:layout_below="@id/iv_lll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_margin="5dp"
+                android:layout_marginRight="40dp"
                 android:id="@+id/iv_cell_like"
                 android:layout_width="25dp"
                 android:src="@drawable/icon_cell_like"
                 android:layout_height="25dp"/>
              <ImageView
-                 android:layout_margin="5dp"
+                 android:layout_marginRight="40dp"
                  android:id="@+id/iv_cell_diss"
                 android:layout_width="25dp"
                 android:src="@drawable/icon_cell_diss"
                 android:layout_height="25dp"/>
              <ImageView
-                 android:layout_margin="5dp"
+                 android:layout_marginRight="40dp"
                  android:id="@+id/iv_cell_comment"
                 android:layout_width="20dp"
                 android:src="@drawable/icon_cell_comment"
                 android:layout_height="20dp"/>
              <ImageView
-                 android:layout_margin="5dp"
                  android:id="@+id/iv_cell_share"
                 android:layout_width="25dp"
                 android:src="@drawable/icon_cell_share"
                 android:layout_height="25dp"/>
-
         </LinearLayout>
     </RelativeLayout>
 
