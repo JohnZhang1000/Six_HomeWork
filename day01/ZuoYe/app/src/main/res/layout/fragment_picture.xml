@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mvp.view.fragment.HomeFragment">
+    tools:context=".mvp.view.fragment.PictureFragment">
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/picture_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
