@@ -42,23 +42,27 @@ public class TVAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         int type = getItemViewType(position);
+
         if (type == 0) {
             ViewHolder0 holder0 = (ViewHolder0) holder;
             holder0.title.setText(tvBeans.get(position).getTitle());
-            Glide.with(context).load(tvBeans.get(position).getFilePathList().get(0)).into(holder0.img1);
-            Glide.with(context).load(tvBeans.get(position).getFilePathList().get(1)).into(holder0.img2);
-            Glide.with(context).load(tvBeans.get(position).getFilePathList().get(2)).into(holder0.img3);
+            if (tvBeans.get(position).getFilePathList().size()>0){
+                Glide.with(context).load(tvBeans.get(position).getFilePathList().get(0).getFilePath()).into(holder0.img1);
+                Glide.with(context).load(tvBeans.get(position).getFilePathList().get(1).getFilePath()).into(holder0.img2);
+                Glide.with(context).load(tvBeans.get(position).getFilePathList().get(2).getFilePath()).into(holder0.img3);
+            }
             holder0.time.setText(tvBeans.get(position).getCreateTime());
-        }else if (type == 1){
+        } else if (type == 1) {
             ViewHolder1 holder1 = (ViewHolder1) holder;
             holder1.title.setText(tvBeans.get(position).getTitle());
-            Glide.with(context).load(tvBeans.get(position).getFilePathList().get(0)).into(holder1.img);
+            Glide.with(context).load(tvBeans.get(position).getFilePathList().get(0).getFilePath()).into(holder1.img);
             holder1.time.setText(tvBeans.get(position).getCreateTime());
-        }else {
+        } else {
             ViewHolder2 holder2 = (ViewHolder2) holder;
             holder2.title.setText(tvBeans.get(position).getTitle());
             holder2.time.setText(tvBeans.get(position).getCreateTime());
         }
+
     }
 
     @Override

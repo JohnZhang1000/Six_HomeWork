@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -41,6 +42,7 @@ public class FindFragment extends Fragment {
     private ViewPager mVp;
     private TabLayout mTb;
     private ArrayList<TVFragment> tvFragments;
+    private NestedScrollView mNest;
 
     @Nullable
     @Override
@@ -52,7 +54,7 @@ public class FindFragment extends Fragment {
         return view;
     }
 
-    @SuppressLint("CheckResult")
+
     private void initNav() {
         new Retrofit.Builder()
                 .baseUrl(ApiService.sUrl)
@@ -142,6 +144,10 @@ public class FindFragment extends Fragment {
         mRec = view.findViewById(R.id.find_rec);
         mVp = view.findViewById(R.id.hot_vp);
         mTb = view.findViewById(R.id.hot_tab);
+        mNest = view.findViewById(R.id.nest_scrollview);
+
+        mNest.setFillViewport(true);
+
         hotBeans = new ArrayList<>();
         tabBeans = new ArrayList<>();
 
