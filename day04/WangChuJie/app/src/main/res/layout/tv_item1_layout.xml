@@ -6,10 +6,10 @@
 
     <TextView
         android:id="@+id/tv_item_title"
-        android:textSize="18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp" />
+        android:layout_margin="15dp"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,28 +20,31 @@
             android:id="@+id/tv_item_img1"
             android:layout_width="0dp"
             android:layout_height="120dp"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1" />
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop" />
 
         <ImageView
             android:id="@+id/tv_item_img2"
             android:layout_width="0dp"
             android:layout_height="120dp"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1" />
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop" />
 
         <ImageView
             android:id="@+id/tv_item_img3"
             android:layout_width="0dp"
             android:layout_height="120dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tv_item_time"
-        android:layout_margin="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp" />
 </LinearLayout>
